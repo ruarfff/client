@@ -10,10 +10,19 @@ fi
 # not neccessarily where the script is run from.
 WORKING_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Initialising arrays with the output of a command is done differently on bash
+# vs ksh
+THIS_SHELL=`echo $SHELL | awk -F/ '{print $NF}'`
+if [ $THIS_SHELL = "ksh" ]; then
+	. $WORKING_DIR/lib/supported_plats_ksh.sh
+fi
+if [ $THIS_SHELL = "bash" ]; then
+	. $WORKING_DIR/lib/supported_plats_bash.sh
+fi
+
 PLATFORM=$(uname -s)
 # On HP-UX, architecture is retrieved with : uname -m
-#the uname -p fails on the PaRisc tested on machine 10.241.209.183
-if [ "$PLATFORM" == "HP-UX" ]; then
+if [ "$PLATFORM" = "HP-UX" ]; then
 	# convert any '/' in output to '_'
 	ARCHITECTURE=$(uname -m | sed 's/\//_/g')
 else
@@ -65,8 +74,8 @@ FSUTILS_DIR="$WORKING_DIR/fsUtils"
 LOG_DIR="$WORKING_DIR/logs"
 REPORT_DIR="$FSUTILS_DIR/reports"
 
-FSSCAN="$FSUTILS_DIR/bin/fsscan$PLATFORM$ARCHITECTURE" 
-FSREPORT="$FSUTILS_DIR/bin/fsReport$PLATFORM$ARCHITECTURE"
+FSSCAN="$FSUTILS_DIR/fsScan/fsscan$PLATFORM$ARCHITECTURE" 
+FSREPORT="$FSUTILS_DIR/fsReport/fsReport$PLATFORM$ARCHITECTURE"
 REPORT_CONFIG="$WORKING_DIR/config/report/NFS.cfg"
 
 # Parameter Variables
@@ -166,17 +175,7 @@ function checkSupported {
 }
 
 function listSupportedPlatforms {
-	scanBinaries=( "$FSUTILS_DIR"/fsScan/* )
-	reportBinaries=( "$FSUTILS_DIR"/fsReport/* )
-	echo; echo "Support platforms and architectures for fsScan are : "; echo
-	for scanBinary in ${scanBinaries[@]}; do
-		echo $scanBinary | awk -F/ '{print $NF}' | sed 's/^fsscan//g'
-	done
-	echo; echo; echo "Support platforms and architectures for fsReport are : "; echo
-	for reportBinary in ${reportBinaries[@]}; do
-		echo $reportBinary | awk -F/ '{print $NF}' | sed 's/^fsReport//g'
-	done
-	echo
+	my_array $FSUTILS_DIR
 }
 
 # Fetch command line arguments

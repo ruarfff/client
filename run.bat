@@ -8,21 +8,22 @@ setlocal enabledelayedexpansion enableextensions
 :: If error flag set, we do not have admin privileges.
 if '%errorlevel%' NEQ '0' (
     goto UACPrompt
-) else ( 
-    call:GotAdmin 
+) else (
+    call:GotAdmin
 )
 
 :: Properties
 
 set WORKING_DIR=%~dp0
 
-set 7ZIP=%WORKING_DIR%lib\7za920\7za.exe
+set ZIP=%WORKING_DIR%lib\7za920\7za.exe
 
 set FSUTILS_DIR=%WORKING_DIR%fsUtils
 set LOG_DIR=%WORKING_DIR%logs
 set REPORT_DIR=%FSUTILS_DIR%\reports
+set OUTPUT_DIR=%WORKING_DIR%fsUtils\output
 
-set FSSCAN=%FSUTILS_DIR%\bin\fsScan.exe 
+set FSSCAN=%FSUTILS_DIR%\bin\fsScan.exe
 set FSREPORT=%FSUTILS_DIR%\bin\fsReport.exe
 set REPORT_CONFIG=%WORKING_DIR%config\report\CIFS.cfg
 
@@ -129,20 +130,18 @@ if not exist %TEMP% mkdir %TEMP%
 
 
 if %ACTION% == all (
-    call :RunScan    
+    call :RunScan
     call :RunReport
     goto :end
-) 
+)
 if %ACTION% == scan (
-    echo scan
-    ::call :RunScan
+    call :RunScan
     goto :end
 )
 if %ACTION% == report (
-    echo report
-    ::call :RunReport
+    call :RunReport
     goto :end
-) 
+)
 :: None of the above
 echo Invalid action provided. Valid actions are scan, report or all.
 
@@ -156,7 +155,7 @@ goto :end
 
 :ShowHelp
 (
-    echo *********************************************************************************** 
+    echo ***********************************************************************************
     echo *
     echo * FSMA Client - EMC FSMA Client File System Scanning and Reporting Utility
     echo *
@@ -171,10 +170,10 @@ goto :end
     echo * -dtl : path to DTL files, defaults to \DTLs\fsScan.dtl
     echo * -tag : tag to pass to scan, defaults to FSMA_RPT
     echo * -log : log files, default to \logs\fsScan.log
-    echo * -err : error logs, default to \logs\fsErrScan.log    
+    echo * -err : error logs, default to \logs\fsErrScan.log
     echo * -temp : folder for temporary working files, defaults to \tmp
     echo *
-    echo ***********************************************************************************  
+    echo ***********************************************************************************
     goto :EOF
 )
 
@@ -191,7 +190,7 @@ goto :end
         echo %FSSCAN% %LOCATION% -dtl %DTL% -tag %TAG% -log %LOG% -err %ERR% -cfg %CONFIG%
         echo Please wait.......
         %FSSCAN% %LOCATION% -dtl %DTL% -tag %TAG% -log %LOG% -err %ERR% -cfg %CONFIG%
-        echo Scan finished        
+        echo Scan finished
     ) else (
         echo Error! Could not find fsScan executable
     )
@@ -200,38 +199,33 @@ goto :end
 
 :RunReport
 (
-    if exist %FSREPORT% (
-        set OUTPUT_DIR=%WORKING_DIR%fsUtils\output
-
-        echo %OUTPUT_DIR%
-
-        pause 
+    if exist %FSREPORT% (        
 
         echo Running command:
         echo %FSREPORT% -dtl %DTL% -cfg %REPORT_CONFIG%
         echo Please wait.......
 
-        %FSREPORT% -dtl %DTL% -cfg %REPORT_CONFIG% -rdir %REPORT_DIR% 
-        
+        %FSREPORT% -dtl %DTL% -cfg %REPORT_CONFIG% -rdir %REPORT_DIR%
+
         echo Creating output file: %OUTPUT%
-        
+
         rd /s /q %OUTPUT_DIR%
         mkdir %OUTPUT_DIR%
 
         xcopy /s /y %REPORT_DIR% %OUTPUT_DIR%
         xcopy /y %LOG% %OUTPUT_DIR%
         xcopy /y %ERR% %OUTPUT_DIR%
-                
-        echo %7ZIP%
-        pause 
 
-        %7ZIP%  a %OUTPUT% %OUTPUT_DIR%
-           
+        echo %ZIP%
+        pause
+
+        %ZIP%  a %OUTPUT% %OUTPUT_DIR%
+
         rd /s /q fsUtils\output
         rd /s /q %REPORT_DIR%
-        
+
         echo Reporting finished
-        echo Outputs written to %OUTPUT%        
+        echo Outputs written to %OUTPUT%
 
     ) else (
         echo Error! Could not find fsReport executable
@@ -249,7 +243,7 @@ goto :end
     exit /b
 )
 
-:GotAdmin 
+:GotAdmin
 (
     if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
     pushd "%CD%"

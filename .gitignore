@@ -1,2 +1,6 @@
 *.log
 *.dtl
+tmp/
+fsReport.zip
+fsReport.tar.gz
+
