@@ -69,7 +69,7 @@ elif [ "$PLATFORM"="HP-UX" ] ; then
 
 fi
 
-
+DTLSTOPROCESS=""
 FSUTILS_DIR="$WORKING_DIR/fsUtils"
 LOG_DIR="$WORKING_DIR/logs"
 REPORT_DIR="$FSUTILS_DIR/reports"
@@ -124,6 +124,12 @@ function RunScan {
 }
 
 function RunReport {
+	if [ DTLSTOPROCESS = "" ] ; then
+		List=$DTLSTOPROCESS
+	else
+		List=$DTL
+	fi
+
 	if [ -f "$FSREPORT" ]
 	then
 		# Tell the user what's going to happen
@@ -234,6 +240,8 @@ while test $# -gt 0; do
                 -dtl)
                         shift
                         if test $# -gt 0; then
+								#$1 is a comma separated list of values. either files or dirs
+								#ProcessDTLS $1 
                                 export DTL=$1
                         else
                                 echo "-dtl option was used but no dtl file specified"
