@@ -1,0 +1,544 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"FSR",
+				"FSREPORT_APP"
+			],
+			[
+				"FSMA",
+				"FSMA_RPT"
+			],
+			[
+				"OUTPUT",
+				"OUTPUT"
+			],
+			[
+				"m",
+				"membersWithWritePermissions"
+			],
+			[
+				"mem",
+				"members"
+			],
+			[
+				"clo",
+				"cloudLib"
+			],
+			[
+				"get",
+				"getCloud3Id"
+			],
+			[
+				"cloud",
+				"cloud3"
+			],
+			[
+				"cloudU",
+				"cloudUtil"
+			],
+			[
+				"clou",
+				"cloudUtil"
+			],
+			[
+				"close",
+				"closeConnection"
+			],
+			[
+				"app",
+				"app1"
+			],
+			[
+				"s",
+				"strict"
+			],
+			[
+				"samp",
+				"sampleApps"
+			],
+			[
+				"sample",
+				"sampleCloud"
+			],
+			[
+				"shoud",
+				"should"
+			],
+			[
+				"sampel",
+				"sampleUser"
+			],
+			[
+				"sampl",
+				"sampleUser"
+			],
+			[
+				"App",
+				"AppStore"
+			],
+			[
+				"Ba",
+				"BaseCloudSchema"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"se",
+				"selectedRows"
+			],
+			[
+				"last",
+				"lastRowIndex"
+			],
+			[
+				"las",
+				"lastRowIndex"
+			],
+			[
+				"cu",
+				"currentRowIndex"
+			],
+			[
+				"selected",
+				"selectedClass"
+			],
+			[
+				"cl",
+				"clearTableSelection"
+			],
+			[
+				"sele",
+				"selectedRows"
+			],
+			[
+				"table",
+				"tableRows"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "run.sh",
+			"settings":
+			{
+				"buffer_size": 10006,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/system_checker.sh",
+			"settings":
+			{
+				"buffer_size": 1483,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/supported_plats_ksh.sh",
+			"settings":
+			{
+				"buffer_size": 815,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/supported_plats_bash.sh",
+			"settings":
+			{
+				"buffer_size": 776,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"selected_items":
+		[
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"shell",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 369.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ruairiobrien/fsma-client/lib/supported_plats_bash.sh",
+		"/Users/ruairiobrien/fsma-client/.gitignore",
+		"/Users/ruairiobrien/fsma-client/lib/supported_plats_ksh.sh",
+		"/Users/ruairiobrien/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/ruairiobrien/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ruairiobrien/laas/README.md",
+		"/Users/ruairiobrien/fooforms/frontend/src/js/formBuilder/formBuilderControllers.js",
+		"/Users/ruairiobrien/Library/Application Support/iPhone Simulator/7.1/Applications/C4B016E3-E140-4E61-8BB5-5571B41972AC/MyGaff.app/www/js/services.js",
+		"/Users/ruairiobrien/MyGaff/platforms/ios/MyGaff/config.xml",
+		"/Users/ruairiobrien/MyGaff/platforms/ios/MyGaff/main.m",
+		"/Users/ruairiobrien/MyGaff/platforms/ios/cordova/defaults.xml",
+		"/Users/ruairiobrien/MyGaff/platforms/ios/cordova/lib/copy-www-build-step.sh",
+		"/Users/ruairiobrien/MyGaff/platforms/ios/platform_www/cordova.js",
+		"/Users/ruairiobrien/Downloads/1.0.11/examples/index.html",
+		"/Users/ruairiobrien/Downloads/1.0.11/examples/exclusive-mode-with-array.html",
+		"/Users/ruairiobrien/fooforms/frontend/src/js/authentication/authenticationServices.js",
+		"/Users/ruairiobrien/Downloads/foundation-5.2.2/index.html",
+		"/Users/ruairiobrien/cordova/mygaff/www/js/vendor/jquery.js",
+		"/Users/ruairiobrien/cordova/mygaff/www/js/index.js",
+		"/Users/ruairiobrien/cordova/mygaff/hooks/README.md",
+		"/Users/ruairiobrien/Downloads/ui-bootstrap-tpls-0.10.0.min.js",
+		"/Users/ruairiobrien/fooforms/bower_components/angular/bower.json",
+		"/Users/ruairiobrien/Library/Application Support/Sublime Text 3/Packages/User/codeivate-st.sublime-settings",
+		"/Users/ruairiobrien/Desktop/cloud.json",
+		"/Users/ruairiobrien/OneDrive/tests/Scripts/FSUtilsTests/run.sh",
+		"/Users/ruairiobrien/Desktop/test.sh",
+		"/Users/ruairiobrien/Desktop/fooforms/config/routes.js",
+		"/Users/ruairiobrien/Dev/fooforms/package.json",
+		"/Users/ruairiobrien/Downloads/bootstrap-3.1.1-dist/js/bootstrap.min.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/cloud/lib/cloudUtil.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/cloud/cloudUtil-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/user/models/user.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/spec-util.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/user/userCreation-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/cloud/cloudCreation-spec.js",
+		"/Users/ruairiobrien/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/ruairiobrien/Dev/fooforms/apps/app/models/app.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/cloud/lib/CloudQuery.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/user/lib/userCreator.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/user/test.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/cloud/lib/cloudCreator.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/cloud/models/cloud.js",
+		"/Users/ruairiobrien/Dev/fooforms/apps/database/lib/databaseGateway.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/app/appCreation-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/cloud/userCloud-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/cloud/cloudAppPublishing-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/cloud/cloudQuery-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/cloud/appCloud-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/node_modules/mongoose/package.json",
+		"/Users/ruairiobrien/Dev/fooforms/test/spec/apps/database/database-spec.js",
+		"/Users/ruairiobrien/Dev/fooforms/.gitignore",
+		"/Users/ruairiobrien/Dev/selecttable/.gitignore",
+		"/Users/ruairiobrien/Dev/selecttable/js/watcher.js",
+		"/Users/ruairiobrien/Dev/selecttable/selecttable.sublime-project",
+		"/Users/ruairiobrien/Dev/selecttable/css/main.css",
+		"/Users/ruairiobrien/Dev/selecttable/js/main.js",
+		"/Users/ruairiobrien/Dev/selecttable/js/selecttable.js",
+		"/Users/ruairiobrien/Dev/selecttable/index.html",
+		"/Users/ruairiobrien/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ruairiobrien/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ruairiobrien/Dev/selecttable/js/vendor/jquery-1.11.0.min.js",
+		"/Users/ruairiobrien/slecttable.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open files>",
+			"this file",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"DTLSTOPROCESS",
+			"my-array",
+			"RunReport",
+			"RunScan",
+			"SetPermissions",
+			"SetUpDirectories",
+			"ARCHITECTURE",
+			"PLATFORM",
+			"testUtil",
+			"save"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"DTLS_TO_PROCESS",
+			"echoAvailableBinaries",
+			"runReport",
+			"runScan",
+			"setPermissions",
+			"setupDirectories"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "run.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10006,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								889,
+								889
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/system_checker.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1483,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1402,
+								1402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/supported_plats_ksh.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								742,
+								742
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/supported_plats_bash.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								690,
+								690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "fsma-client.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

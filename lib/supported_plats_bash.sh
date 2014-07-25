@@ -1,20 +1,28 @@
 # !/bin/sh
 
-function my_array {
-	#echo "Waheyy Bosco!!"
-	#echo $1
-
+function echoAvailableBinaries {
 	FSUTILS_DIR=$1
-	scanBinaries=( "$FSUTILS_DIR"/fsScan/* )
-	reportBinaries=( "$FSUTILS_DIR"/fsReport/* )
+	binaries=( "$FSUTILS_DIR"/bin/* )
 
 	echo; echo "Support platforms and architectures for fsScan are : "; echo
-	for scanBinary in ${scanBinaries[@]}; do
-		echo $scanBinary | awk -F/ '{print $NF}' | sed 's/^fsscan//g'
+	for scanBinary in "${binaries[@]}"; do
+		
+		if [[ $(basename $scanBinary) == fsScan*.exe ]] ; then
+			echo "Windows"
+		elif [[ $(basename $scanBinary) == fsScan* ]] ; then
+			echo $scanBinary | awk -F/ '{print $NF}' | sed 's/^fsScan//g'
+		fi
+
 	done
 	echo; echo; echo "Support platforms and architectures for fsReport are : "; echo
-	for reportBinary in ${reportBinaries[@]}; do
-		echo $reportBinary | awk -F/ '{print $NF}' | sed 's/^fsReport//g'
+	for reportBinary in "${binaries[@]}"; do
+
+		if [[ $(basename $reportBinary) == fsScan*.exe ]] ; then
+			echo "Windows"
+		elif [[ $(basename $reportBinary) == fsReport* ]] ; then
+			echo $reportBinary | awk -F/ '{print $NF}' | sed 's/^fsReport//g'	
+		fi
+				
 	done
 	echo
 }
